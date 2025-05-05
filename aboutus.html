@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про клуб — LatinaDance</title>
+   <meta name="description" content="LatinaDance — танцювальний клуб у серці міста. Пропонуємо бачату, сальсу, ча-ча-ча для всіх рівнів. Запишіться на пробне заняття вже сьогодні!">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .bg-overlay {
+      background-color: rgba(255, 255, 255, 0.5);
+      flex: 1;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .navbar {
+      background-color: #000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .navbar-brand {
+      font-size: 2.5rem;
+      font-family: 'Pacifico';
+      color: #fff;
+    }
+    .navbar-nav {
+      margin: 0 auto;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 0.1px;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.25rem;
+    }
+    .btn-primary {
+      background-color: #cc0000;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #a30000;
+    }
+    .container-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+    .text-content {
+      flex: 1;
+      margin-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+    .text-content h2 {
+      font-size: 2.5rem;
+      font-family: 'Pacifico';
+      margin-bottom: 1rem;
+    }
+    .text-content p {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+    .directions {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .directions .btn {
+      margin: 0.3rem;
+      font-size: 1.5rem;
+      padding: 0.8rem 0.5rem;
+      background-color: #ccc;
+      color: #000;
+      border: none;
+    }
+    .img-content {
+      flex: 1;
+      text-align: center;
+    }
+    .img-content img {
+      max-width: 80%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+ .decor-img {
+      display: block;
+      margin: 1px 0;
+      max-width: 500px;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .social-icons {
+      position: absolute;
+      top: -40px;
+      right: 1rem;
+    }
+    .social-icons a {
+      background: #000;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      margin: 0 5px;
+      font-size: 1.2rem;
+    }
+    .btn-signup {
+      font-size: 1.5rem;
+      padding: 0.8rem 2rem;
+    }
+
+.text-content h4 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.directions {
+  margin-top: 0.2rem;
+  gap: 1rem;
+}
+
+.directions .btn {
+  margin: 0.1rem;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.decor-img {
+  margin-top: -2rem;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">LatinaDance</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Про клуб</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainers.html">Тренери</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Контактна інформація</a></li>
+        </ul>
+      </div>
+      <a href="#callback" class="btn btn-primary">Замовити зворотній дзвінок</a>
+    </div>
+  </nav>
+
+  <div class="bg-overlay">
+    <div class="container-section">
+      <div class="text-content">
+        <h2>LatinaDance</h2>
+        <p>Наш танцювальний клуб – це місце, де народжуються справжні емоції та відточуються танцювальні навички. Ми пропонуємо навчання для всіх рівнів – від початківців до професіоналів. Ми створюємо комфортні умови для кожного, незалежно від віку чи рівня підготовки. Наша мета – допомогти вам розкрити свій потенціал і закохатися в танець.</p>
+        <h4 class="mt-4">Напрямки танцю:</h4>
+        <div class="directions">
+          <button class="btn">Бачата</button>
+          <button class="btn">Сальса</button>
+          <button class="btn">Ча-ча-ча</button>
+        </div>
+        <div class="mt-4 text-center">
+          <img src="ornament1.png" alt="візерунок" class="decor-img">
+          <a href="#signup" class="btn btn-dark btn-signup">Записатись на пробне заняття</a>
+        </div>
+      </div>
+      <div class="img-content">
+        <img src="dance-club.jpg" alt="Фото клубу">
+      </div>
+    </div>
+  </div>
+
+    <footer>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+      <p>@ latinadance.com.ua &nbsp; 2025</p>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
