@@ -180,7 +180,9 @@
           <li class="nav-item"><a class="nav-link" href="#contacts">Контактна інформація</a></li>
         </ul>
       </div>
-      <a href="#callback" class="btn btn-primary">Замовити зворотній дзвінок</a>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
+  Замовити зворотній дзвінок
+</button>
     </div>
   </nav>
 
@@ -205,6 +207,32 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title" id="callbackModalLabel">Зворотній дзвінок</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="userName" class="form-label">Ім’я</label>
+            <input type="text" class="form-control" id="userName" required>
+          </div>
+          <div class="mb-3">
+            <label for="userPhone" class="form-label">Номер телефону</label>
+            <input type="tel" class="form-control" id="userPhone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Відправити</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     <footer>
       <div class="social-icons">
