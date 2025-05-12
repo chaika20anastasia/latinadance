@@ -6,226 +6,53 @@
   <title>LatinaDance — школа танців</title>
   <meta name="description" content="LatinaDance — школа латиноамериканських танців з професійними тренерами, дружньою атмосферою та широким вибором танців.">
   <link rel="icon" href="favicon.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Предзагрузка основных ресурсов -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="image" href="dance-couple1.webp">
+  
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+  </noscript>
+
+  <!-- Критический CSS встраиваем напрямую -->
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #000;
-      font-family: Georgia, serif;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .bg-overlay {
-      background-color: rgba(255, 255, 255, 0.5);
-      flex: 1;
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-
- .navbar {
-      background-color: #000;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .navbar .container {
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navbar-brand {
-      font-size: 2.5rem;
-      font-family: 'Pacifico';
-      color: #fff !important;
-    }
-
-    .navbar-nav {
-      border-bottom: 1px solid white;
-      padding-bottom: 0.1px;
-      margin: 0 auto;
-     
-    }
-
-    .navbar-nav .nav-link {
-      color: #fff;
-      margin: 0 10px;
-      font-size: 1.25rem;
-      text-decoration: none;
-      
-    }
-
-    .navbar-toggler {
-      margin-right: 1rem;
-      border-color: #fff;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-
-    .btn-primary {
-      background-color: #cc0000;
-      border: none;
-      padding: 0.5rem 1.5rem;
-    }
-
-    .btn-primary:hover {
-      background-color: #a30000;
-    }
-
-    .content {
-      padding: 6rem 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-    }
-
-    .text-section {
-      max-width: 700px;
-      text-align: center;
-      margin-left: 0px;
-      padding: 0;
-    }
-
-    .text-section h1,
-    .text-section .lead {
-      margin-left: 0px;
-      font-size: 2rem;
-    }
-
-    .features {
-      text-align: left;
-      margin-top: 2rem;
-      margin-left: 2rem;
-    }
-
-    .features p {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
-    }
-
-    .features p img {
-      width: 55px;
-      height: 45px;
-      margin-right: 10px;
-    }
-
-    .content img.main-image {
-      width: 600px;
-      height: 550px;
-      margin-top: 0rem;
-      margin-right: 0rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .btn-signup {
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      margin-left: 0;
-    }
-
-   footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      font-size: 1.2rem;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .social-icons {
-      position: absolute;
-      top: -40px;
-      right: 1rem;
-    }
-
-    .social-icons a {
-      background: #000;
-      color: #fff;
-      border-radius: 50%;
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      text-align: center;
-      line-height: 32px;
-      margin: 0 5px;
-      font-size: 1.2rem;
-    }
-
-    
-.latina-big {
-  font-size: 3rem;
-  font-family: 'Pacifico';
-}
-
+    html, body { height: 100%; margin: 0; font-family: Georgia, serif; }
+    body { background: url('background.jpg') no-repeat center center fixed; background-size: cover; color: #000; display: flex; flex-direction: column; }
+    .bg-overlay { background-color: rgba(255, 255, 255, 0.5); flex: 1; padding-top: 80px; padding-bottom: 80px; }
+    .navbar { background-color: #000; position: fixed; top: 0; width: 100%; z-index: 1000; }
+    .navbar .container { justify-content: space-between; align-items: center; }
+    .navbar-brand { font-size: 2.5rem; font-family: 'Pacifico'; color: #fff !important; }
+    .navbar-nav { border-bottom: 1px solid white; padding-bottom: 0.1px; margin: 0 auto; }
+    .navbar-nav .nav-link { color: #fff; margin: 0 10px; font-size: 1.25rem; text-decoration: none; }
+    .navbar-toggler { margin-right: 1rem; border-color: #fff; }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+    .btn-primary { background-color: #cc0000; border: none; padding: 0.5rem 1.5rem; }
+    .btn-primary:hover { background-color: #a30000; }
+    .content { padding: 6rem 1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0; }
+    .text-section { max-width: 700px; text-align: center; margin-left: 0px; padding: 0; }
+    .text-section h1, .text-section .lead { margin-left: 0px; font-size: 2rem; }
+    .features { text-align: left; margin-top: 2rem; margin-left: 2rem; }
+    .features p { display: flex; align-items: center; font-size: 1.5rem; }
+    .features p img { width: 55px; height: 45px; margin-right: 10px; }
+    .content img.main-image { width: 600px; height: 550px; margin: 0; padding: 0; }
+    .btn-signup { font-size: 1.5rem; padding: 1rem 2rem; margin-left: 0; }
+    footer { background-color: #000; color: #fff; text-align: center; font-size: 1.2rem; padding: 1rem; position: fixed; bottom: 0; width: 100%; }
+    .social-icons { position: absolute; top: -40px; right: 1rem; }
+    .social-icons a { background: #000; color: #fff; border-radius: 50%; display: inline-block; width: 32px; height: 32px; text-align: center; line-height: 32px; margin: 0 5px; font-size: 1.2rem; }
+    .latina-big { font-size: 3rem; font-family: 'Pacifico'; }
     @media screen and (max-width: 576px) {
-      body {
-        font-size: 14px;
-        padding: 5px;
-      }
-
-      .navbar-nav {
-        text-align: center;
-        padding-top: 0.1rem;
-      }
-
-      .text-section {
-        margin: 0 auto;
-        padding: 1rem;
-        text-align: center;
-      }
-
-      .content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-top: 0;
-        margin-top: 1rem;
-      }
-
-      .content img.main-image {
-        max-width: 100%;
-        height: auto;
-        margin-top: 1rem;
-      }
-
-      .features {
-        margin-left: 0;
-        text-align: center;
-      }
-
-.latina-big {
-  font-size: 3rem;
-  font-family: 'Pacifico';
-}
-
-footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      font-size: 1.2rem;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+      body { font-size: 14px; padding: 5px; }
+      .navbar-nav { text-align: center; padding-top: 0.1rem; }
+      .text-section { margin: 0 auto; padding: 1rem; text-align: center; }
+      .content { flex-direction: column; align-items: center; text-align: center; padding-top: 0; margin-top: 1rem; }
+      .content img.main-image { max-width: 100%; height: auto; margin-top: 1rem; }
+      .features { margin-left: 0; text-align: center; }
+      footer { font-size: 1.2rem; padding: 1rem; position: fixed; bottom: 0; width: 100%; }
     }
   </style>
 </head>
@@ -244,15 +71,11 @@ footer {
             <li class="nav-item"><a class="nav-link" href="trainers.html">Тренери</a></li>
             <li class="nav-item"><a class="nav-link" href="#contacts">Контактна інформація</a></li>
             <li class="nav-item d-lg-none mt-2">
-              <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#callbackModal">
-                Замовити зворотній дзвінок
-              </button>
+              <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#callbackModal">Замовити зворотній дзвінок</button>
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-primary d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#callbackModal">
-          Замовити зворотній дзвінок
-        </button>
+        <button type="button" class="btn btn-primary d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#callbackModal">Замовити зворотній дзвінок</button>
       </div>
     </nav>
 
@@ -307,8 +130,7 @@ footer {
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Асинхронная загрузка скриптов -->
+  <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
