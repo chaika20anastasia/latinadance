@@ -6,138 +6,140 @@
   <title>LatinaDance — школа танців</title>
   <meta name="description" content="LatinaDance — школа латиноамериканських танців з професійними тренерами, дружньою атмосферою та широким вибором танців.">
   <link rel="icon" href="favicon.png" type="image/png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
-
-
-    @media screen and (max-width: 576px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  header, nav, footer {
-    text-align: center;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #fff;
-  }
-
-  .container, .section {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .button {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-
-  form input, form textarea, form button {
-    width: 100%;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  footer {
-    padding: 20px 10px;
-  }
-}
-
-
-    
     body {
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #000;
       font-family: Georgia, serif;
+      display: flex;
+      flex-direction: column;
     }
+
     .bg-overlay {
       background-color: rgba(255, 255, 255, 0.5);
-      min-height: 100vh;
+      flex: 1;
       padding-top: 80px;
       padding-bottom: 80px;
     }
-    .navbar {
+
+ .navbar {
       background-color: #000;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
     }
-    .navbar .container {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-    .navbar-brand {
-      font-size: 2rem;
-      justify-self: start; 
-    }
-    .navbar-nav {
-      margin: 0 auto;
-      border-bottom: 1px solid #fff;
-      padding-bottom: 0.1px; 
-    }
-    .navbar-nav .nav-link {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.25rem;
-  text-decoration: none;
-}
 
+    .navbar .container {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-brand {
+      font-size: 2.5rem;
+      font-family: 'Pacifico';
+      color: #fff !important;
+    }
+
+    .navbar-nav {
+      border-bottom: 1px solid white;
+      padding-bottom: 0.1px;
+      margin: 0 auto;
+     
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      text-decoration: none;
+      
+    }
+
+    .navbar-toggler {
+      margin-right: 1rem;
+      border-color: #fff;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
 
     .btn-primary {
       background-color: #cc0000;
       border: none;
-      padding: 0.5rem 1.5rem; 
+      padding: 0.5rem 1.5rem;
     }
+
     .btn-primary:hover {
       background-color: #a30000;
     }
+
     .content {
-      padding: 5rem 1rem;
+      padding: 6rem 1rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      gap: 0;
     }
-  
+
     .text-section {
       max-width: 700px;
-      margin-left: 2rem;
       text-align: center;
-      margin-left: -230px;
-      margin-top: +10px;
+      margin-left: 0px;
+      padding: 0;
     }
+
+    .text-section h1,
+    .text-section .lead {
+      margin-left: 0px;
+      font-size: 2rem;
+    }
+
     .features {
       text-align: left;
       margin-top: 2rem;
-      margin-left: 120px;
+      margin-left: 2rem;
     }
+
     .features p {
       display: flex;
       align-items: center;
+      font-size: 1.5rem;
     }
+
     .features p img {
       width: 55px;
       height: 45px;
       margin-right: 10px;
     }
-    footer {
+
+    .content img.main-image {
+      width: 600px;
+      height: auto;
+      margin-top: 0rem;
+      margin-right: 0rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .btn-signup {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      margin-left: 0;
+    }
+
+   footer {
       background-color: #000;
       color: #fff;
       text-align: center;
@@ -147,11 +149,13 @@
       bottom: 0;
       width: 100%;
     }
+
     .social-icons {
       position: absolute;
       top: -40px;
       right: 1rem;
     }
+
     .social-icons a {
       background: #000;
       color: #fff;
@@ -165,67 +169,95 @@
       font-size: 1.2rem;
     }
 
-.navbar-brand {
-  font-size: 2.5rem; 
-}
-.navbar-nav .nav-link {
-  font-size: 1.25rem; 
-}
-
-.btn-signup {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
- 
-}
-
-.latina-logo {
+    
+.latina-big {
+  font-size: 3rem;
   font-family: 'Pacifico';
 }
+
+    @media screen and (max-width: 576px) {
+      body {
+        font-size: 14px;
+        padding: 5px;
+      }
+
+      .navbar-nav {
+        text-align: center;
+        padding-top: 0.1rem;
+      }
+
+      .text-section {
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 0;
+        margin-top: 1rem;
+      }
+
+      .content img.main-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+      }
+
+      .features {
+        margin-left: 0;
+        text-align: center;
+      }
 
 .latina-big {
   font-size: 3rem;
   font-family: 'Pacifico';
 }
 
-.text-section h1 {
-  font-size: 2rem; 
-}
-.text-section p.lead {
-  font-size: 2rem; 
-}
-.features p {
-  font-size: 1.5rem; 
-}
-
-.content img.main-image {
-   width: 750px;
-  height: auto;
-margin-left: -60px;
-  margin-top: -95px;
-}
+footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    }
   </style>
 </head>
 <body>
   <div class="bg-overlay">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand text-white" href="#"><span class="latina-logo">LatinaDance</span></a>
+        <a class="navbar-brand" href="#">LatinaDance</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
             <li class="nav-item"><a class="nav-link" href="aboutus.html">Про клуб</a></li>
             <li class="nav-item"><a class="nav-link" href="trainers.html">Тренери</a></li>
             <li class="nav-item"><a class="nav-link" href="#contacts">Контактна інформація</a></li>
+            <li class="nav-item d-lg-none mt-2">
+              <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#callbackModal">
+                Замовити зворотній дзвінок
+              </button>
+            </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-  Замовити зворотній дзвінок
-</button>
+        <button type="button" class="btn btn-primary d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#callbackModal">
+          Замовити зворотній дзвінок
+        </button>
       </div>
     </nav>
 
     <section class="content">
-      <img src="dance-couple.png" alt="Пара танцює" class="main-image">
+      <img src="dance-couple1.png" alt="Пара танцює" class="main-image">
       <div class="text-section">
         <h1><em class="latina-big">LatinaDance</em> – це школа танців, що</h1>
         <p class="lead">дозволить швидко та легко опанувати латиноамериканські танці.</p>
@@ -240,31 +272,31 @@ margin-left: -60px;
     </section>
 
     <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form>
-        <div class="modal-header">
-          <h5 class="modal-title" id="callbackModalLabel">Зворотній дзвінок</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title" id="callbackModalLabel">Зворотній дзвінок</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="userName" class="form-label">Ім’я</label>
+                <input type="text" class="form-control" id="userName" required>
+              </div>
+              <div class="mb-3">
+                <label for="userPhone" class="form-label">Номер телефону</label>
+                <input type="tel" class="form-control" id="userPhone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Відправити</button>
+            </div>
+          </form>
         </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <label for="userName" class="form-label">Ім’я</label>
-            <input type="text" class="form-control" id="userName" required>
-          </div>
-          <div class="mb-3">
-            <label for="userPhone" class="form-label">Номер телефону</label>
-            <input type="tel" class="form-control" id="userPhone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Відправити</button>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
-    
+
     <footer>
       <div class="social-icons">
         <a href="#"><i class="bi bi-instagram"></i></a>
@@ -278,3 +310,5 @@ margin-left: -60px;
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
