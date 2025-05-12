@@ -6,10 +6,57 @@
   <title>Про клуб — LatinaDance</title>
    <meta name="description" content="LatinaDance — танцювальний клуб у серці міста. Пропонуємо бачату, сальсу, ча-ча-ча для всіх рівнів. Запишіться на пробне заняття вже сьогодні!">
   <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
+
+    @media screen and (max-width: 576px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header, nav, footer {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #fff;
+  }
+
+  .container, .section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  form input, form textarea, form button {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+}
+
+
+    
     body {
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
