@@ -4,128 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.png" type="image/png">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Наші тренери — LatinaDance</title>
-   <meta name="description" content="Познайомтесь із досвідченими тренерами LatinaDance. Ми навчаємо сальсі, бачати, ча-ча-ча та інших латиноамериканських танців легко та з натхненням." >
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" >
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" >
+  <meta name="description" content="Познайомтесь із досвідченими тренерами LatinaDance. Ми навчаємо сальсі, бачати, ча-ча-ча та інших латиноамериканських танців легко та з натхненням.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
-
-    @media screen and (max-width: 576px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  header, nav, footer {
-    text-align: center;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #fff;
-  }
-
-  .container, .section {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .button {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-
-  form input, form textarea, form button {
-    width: 100%;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  footer {
-    padding: 20px 10px;
-  }
-}
-
-
-    
-    body {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #000;
-      font-family: Georgia, serif;
-    }
-
-    .bg-overlay {
-      background-color: rgba(255, 255, 255, 0.5);
-      padding-top: 100px;
-      padding-bottom: 120px;
-    }
-
-    .navbar {
-      background-color: #000;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navbar-brand {
-      font-size: 2.5rem;
-      font-family: 'Pacifico';
-      color: white;
-    }
-
-    .navbar-nav {
-      display: flex;
-      flex-direction: row;
-    }
-
-  .navbar-nav {
-      margin: 0 auto;
-      border-bottom: 1px solid #fff; 
-      padding-bottom: 0.1px; 
-    }
-
-    .nav-link {
-      color: #fff !important;
-      margin: 0 10px;
-      font-size: 1.25rem;
-    }
-
-    .nav-link.active {
-      border-bottom: 2px dotted red;
-    }
-
-    .btn-primary {
-      background-color: #cc0000;
-      border: none;
-      padding: 0.5rem 1.5rem;
-    }
-
-    .btn-primary:hover {
-      background-color: #a30000;
-    }
+   html, body { height: 100%; margin: 0; font-family: Georgia, serif; }
+    body { background: url('background.webp') no-repeat center center fixed; background-size: cover; color: #000; display: flex; flex-direction: column; }
+    .bg-overlay { background-color: rgba(255, 255, 255, 0.5); flex: 1; padding-top: 80px; padding-bottom: 80px; }
+    .navbar { background-color: #000; position: fixed; top: 0; width: 100%; z-index: 1000; }
+    .navbar .container { justify-content: space-between; align-items: center; }
+    .navbar-brand { font-size: 2.5rem; font-family: 'Pacifico'; color: #fff !important; }
+    .navbar-nav { border-bottom: 1px solid white; padding-bottom: 0.1px; margin: 0 auto; }
+    .navbar-nav .nav-link { color: #fff; margin: 0 10px; font-size: 1.25rem; text-decoration: none; }
+    .navbar-toggler { margin-right: 1rem; border-color: #fff; }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+    .btn-primary { background-color: #cc0000; border: none; padding: 0.5rem 1.5rem; }
+    .btn-primary:hover { background-color: #a30000; }
 
     .trainers-section {
       max-width: 1100px;
       margin: auto;
       text-align: center;
-      font-size: 2.5rem;
     }
 
     .trainers-section h2 {
@@ -135,14 +36,11 @@
 
     .trainers-section p.lead {
       font-size: 1.5rem;
-      max-width: 1100px;
-      margin: auto;
       margin-bottom: 40px;
     }
 
     .decor {
       font-size: 1.8rem;
-      margin: 1px 0;
       color: #333;
     }
 
@@ -150,9 +48,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0.1rem 0;
+      margin: 1rem 0;
       flex-wrap: wrap;
-     flex-direction: row-reverse;
+      flex-direction: row-reverse;
     }
 
     .trainer:nth-child(even) {
@@ -170,8 +68,19 @@
     .trainer-info {
       flex: 1;
       padding: 1rem;
+      font-size: 1.5rem;
       max-width: 800px;
-     font-size: 1.5rem;
+    }
+
+    .decor-img {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .decor-img img {
+      height: 120px;
+      width: auto;
+      max-width: 100%;
     }
 
     footer {
@@ -204,45 +113,61 @@
       font-size: 1.2rem;
     }
 
+    @media screen and (max-width: 576px) {
+      .navbar-collapse {
+        background-color: #000;
+        text-align: center;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+
+      .nav-link {
+        margin: 10px 0;
+      }
+
 .decor-img {
   text-align: center;
   margin: 1px 0;
 }
 
 .decor-img img {
-  height: 120px;
-  width: 600px;
+  height: auto;
+  width: 90%;
 }
-
-
+    }
   </style>
 </head>
-<body>
-  <div class="bg-overlay">
+<div class="bg-overlay">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">LatinaDance</a>
-        <div class="collapse navbar-collapse show" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
             <li class="nav-item"><a class="nav-link" href="aboutus.html">Про клуб</a></li>
             <li class="nav-item"><a class="nav-link" href="trainers.html">Тренери</a></li>
             <li class="nav-item"><a class="nav-link" href="#contacts">Контактна інформація</a></li>
+            <li class="nav-item d-lg-none mt-2">
+              <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#callbackModal">Замовити зворотній дзвінок</button>
+            </li>
           </ul>
         </div>
-         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callbackModal">
-  Замовити зворотній дзвінок
-</button>
+        <button type="button" class="btn btn-primary d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#callbackModal">Замовити зворотній дзвінок</button>
       </div>
     </nav>
 
     <section class="trainers-section pt-5">
       <h2>Наші тренери</h2>
-      <p class="lead">Наші тренери – це досвідчені професіонали, які не тільки володіють бездоганною технікою, а й уміють навчати легко, доступно та натхненно. Вони допоможуть вам освоїти танцювальні рухи, розвинути пластику та відчути впевненість у собі. Завдяки індивідуальному підходу кожен зможе досягти відмінних результатів та отримати максимум задоволення від занять.</p>
+      <p class="lead px-3 px-sm-5">Наші тренери – це досвідчені професіонали, які не тільки володіють бездоганною технікою, а й уміють навчати легко, доступно та натхненно. Вони допоможуть вам освоїти танцювальні рухи, розвинути пластику та відчути впевненість у собі. Завдяки індивідуальному підходу кожен зможе досягти відмінних результатів та отримати максимум задоволення від занять.</p>
 
       <div class="decor-img">
-  <img src="ornament.png" alt="декор" >
-</div>
+        <img src="ornament.png" alt="декор">
+      </div>
 
       <div class="trainer">
         <img src="maksym.jpg" alt="Максим Танцуренко">
@@ -266,36 +191,35 @@
       </div>
 
       <div class="decor-img">
-  <img src="ornament1.png" alt="декор" >
-</div>
+        <img src="ornament1.png" alt="декор">
+      </div>
     </section>
 
-
-  <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form>
-        <div class="modal-header">
-          <h5 class="modal-title" id="callbackModalLabel">Зворотній дзвінок</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+    <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title" id="callbackModalLabel">Зворотній дзвінок</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="userName" class="form-label">Ім’я</label>
+                <input type="text" class="form-control" id="userName" required>
+              </div>
+              <div class="mb-3">
+                <label for="userPhone" class="form-label">Номер телефону</label>
+                <input type="tel" class="form-control" id="userPhone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Відправити</button>
+            </div>
+          </form>
         </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <label for="userName" class="form-label">Ім’я</label>
-            <input type="text" class="form-control" id="userName" required>
-          </div>
-          <div class="mb-3">
-            <label for="userPhone" class="form-label">Номер телефону</label>
-            <input type="tel" class="form-control" id="userPhone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Відправити</button>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
 
     <footer>
       <div class="social-icons">
@@ -306,8 +230,6 @@
       <p>@ latinadance.com.ua &nbsp; 2025</p>
     </footer>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
